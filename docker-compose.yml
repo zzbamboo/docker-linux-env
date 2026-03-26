@@ -38,8 +38,18 @@ services:
       - ubuntu24-compile:/home
     ports:
      - "2213:22"
+  
+  ubuntu24-arm64-compile:
+    build: ./ubuntu2404-arm64
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ubuntu24-arm64-compile:/home
+    ports:
+     - "2214:22"
 
 volumes:
   compile-openwrt:
   compile-openwrt-home:
   ubuntu24-compile:
+  ubuntu24-arm64-compile:
